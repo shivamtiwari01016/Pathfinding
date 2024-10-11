@@ -1,14 +1,17 @@
 import Slider from "@mui/material/Slider";
 import { alpha, styled } from "@mui/material/styles";
 
+const successColor = "#46B780";
+const successShadow = alpha(successColor, 0.16);
+
 const SuccessSlider = styled(Slider)(() => ({
-    color: "#46B780",
+    color: successColor,
     "& .MuiSlider-thumb": {
         "&:hover, &.Mui-focusVisible": {
-            boxShadow: `0px 0px 0px 8px ${alpha("#46B780", 0.16)}`,
+            boxShadow: `0px 0px 0px 8px ${successShadow}`,
         },
         "&.Mui-active": {
-            boxShadow: `0px 0px 0px 14px ${alpha("#46B780", 0.16)}`,
+            boxShadow: `0px 0px 0px 14px ${successShadow}`,
         },
     },
     "& .MuiSlider-rail": {
@@ -17,6 +20,22 @@ const SuccessSlider = styled(Slider)(() => ({
     },
 }));
 
-export default function StyledCustomization({ disabled, value, min, max, step, onInput, onChange, onChangeCommited, defaultValue, marks, style }) {
-    return <SuccessSlider disabled={disabled} value={value} min={min} max={max} step={step} onInput={onInput} onChangeCommitted={onChangeCommited} onChange={onChange} defaultValue={defaultValue} marks={marks} style={style} />;
+export default function StyledCustomization({ 
+    disabled, value, min, max, step, onInput, onChange, onChangeCommitted, defaultValue, marks, style 
+}) {
+    return (
+        <SuccessSlider 
+            disabled={disabled} 
+            value={value} 
+            min={min} 
+            max={max} 
+            step={step} 
+            onInput={onInput} 
+            onChange={onChange} 
+            onChangeCommitted={onChangeCommitted} 
+            defaultValue={defaultValue} 
+            marks={marks} 
+            style={style} 
+        />
+    );
 }
