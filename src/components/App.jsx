@@ -3,11 +3,11 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 /**
- * Creates a custom dark theme for the application.
+ * Creates a custom white theme for the application.
  */
-const darkTheme = createTheme({
+const lightTheme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
   },
 });
 
@@ -16,7 +16,7 @@ const darkTheme = createTheme({
  */
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={lightTheme}>
       {/* Normalize CSS styles across different browsers */}
       <CssBaseline />
       {/* Render the Map component */}
